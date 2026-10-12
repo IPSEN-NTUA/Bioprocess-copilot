@@ -1,0 +1,2097 @@
+[
+ {
+  "id": "L1-01",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "Which strain was used in bioreactor run FB-013?",
+  "gold_answer": "YX-005",
+  "value": "YX-005",
+  "tolerance": null,
+  "grading": "exact",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/notes/FB-013_MD.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-02",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "In which bioreactor vessel was FB-022 run?",
+  "gold_answer": "R1",
+  "value": "R1",
+  "tolerance": null,
+  "grading": "exact",
+  "key_points": [],
+  "evidence": [
+   "corpus/notes/FB-022_PN.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-03",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "What formic acid concentration does the certificate of analysis report for C5 lot C5-2503?",
+  "gold_answer": "23.74 g/L",
+  "value": 23.74,
+  "tolerance": 0.01,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/materials/CoA_C5-2503.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-04",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "Who constructed strain YX-004?",
+  "gold_answer": "Mark Doherty",
+  "value": "Mark Doherty",
+  "tolerance": null,
+  "grading": "exact",
+  "key_points": [],
+  "evidence": [
+   "corpus/strains/strain_registry.xlsx",
+   "corpus/strains/construction_YX-004.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-05",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "From which date is version 2 of the HPLC method SOP-ANA-003 effective?",
+  "gold_answer": "2025-06-01",
+  "value": "2025-06-01",
+  "tolerance": null,
+  "grading": "exact",
+  "key_points": [],
+  "evidence": [
+   "corpus/sops/SOP-ANA-003_v2.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-06",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "According to the fed-batch SOP, when is the feed started and at what rate?",
+  "gold_answer": "At 7.5 h, at 2.0 mL/h",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "7.5 h",
+   "2.0 mL/h"
+  ],
+  "evidence": [
+   "corpus/sops/SOP-FB-001_v3.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-07",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "Which clone of YX-006 is recorded as selected in the strain registry?",
+  "gold_answer": "c3",
+  "value": "c3",
+  "tolerance": null,
+  "grading": "exact",
+  "key_points": [],
+  "evidence": [
+   "corpus/strains/strain_registry.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-08",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "What final xylitol concentration did Elena Varga's workbook report for FB-001?",
+  "gold_answer": "148.6 g/L",
+  "value": 148.6,
+  "tolerance": 0.1,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-001.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L1-09",
+  "tier": "L1",
+  "category": "lookup",
+  "question": "What dilution factor was used for the HPLC analysis of sample FB018-S06?",
+  "gold_answer": "1:10",
+  "value": 10,
+  "tolerance": null,
+  "grading": "exact",
+  "key_points": [],
+  "evidence": [
+   "corpus/hplc/processed/HPLC_results_2025-06.xlsx",
+   "corpus/hplc/raw/"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-01",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "In FB-003, at which sampling time was glucose first below the HPLC detection limit?",
+  "gold_answer": "8 h",
+  "value": 8.0,
+  "tolerance": 0,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-003.xlsx",
+   "corpus/hplc/processed/HPLC_results_2025-02.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [
+   "lod_encoding"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-02",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "What was the peak ethanol concentration in FB-001, and at which sample time?",
+  "gold_answer": "5.78 g/L at 4 h",
+  "value": 5.78,
+  "tolerance": 0.02,
+  "grading": "key_points",
+  "key_points": [
+   "5.78 g/L",
+   "4 h"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-001.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-03",
+  "tier": "L2",
+  "category": "lookup",
+  "question": "How much base was used in FB-008 according to the lab note?",
+  "gold_answer": "15.2 mL",
+  "value": 15.2,
+  "tolerance": 0.1,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/notes/FB-008_EV.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-04",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "What was the maximum dry weight reached in FB-018?",
+  "gold_answer": "14.03 g/L",
+  "value": 14.03,
+  "tolerance": 0.01,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-018.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-05",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "In the March shake-flask clone screen, what mean xylitol did YX-002 clone c3 reach at 48 h, and from how many flasks?",
+  "gold_answer": "51.2 g/L from 2 flasks",
+  "value": 51.2,
+  "tolerance": 0.1,
+  "grading": "key_points",
+  "key_points": [
+   "51.2 g/L",
+   "2 flasks"
+  ],
+  "evidence": [
+   "corpus/notes/SF_screen_P2_PN.md",
+   "corpus/spreadsheets/PN_clone_screen_Mar2025.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-06",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "What was the lowest dissolved-oxygen reading in FB-005 between 2 h and 40 h after inoculation, and when did it occur?",
+  "gold_answer": "8.7 % at about 15.0 h",
+  "value": 8.7,
+  "tolerance": 0.5,
+  "grading": "key_points",
+  "key_points": [
+   "8.7 %",
+   "~15 h"
+  ],
+  "evidence": [
+   "corpus/online/FB-005_R2.txt"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-07",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "How many HPLC sequences were run in May 2025?",
+  "gold_answer": "6",
+  "value": 6,
+  "tolerance": 0,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/hplc/raw/"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-08",
+  "tier": "L2",
+  "category": "lookup",
+  "question": "Which analytes were added to the HPLC method in version 2 of SOP-ANA-003?",
+  "gold_answer": "Succinate, furfural and HMF",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "succinate",
+   "furfural",
+   "HMF"
+  ],
+  "evidence": [
+   "corpus/sops/SOP-ANA-003_v2.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L2-09",
+  "tier": "L2",
+  "category": "aggregation",
+  "question": "How many shake flasks were in the March clone screen?",
+  "gold_answer": "20",
+  "value": 20,
+  "tolerance": 0,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/PN_clone_screen_Mar2025.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-01",
+  "tier": "L3",
+  "category": "join",
+  "question": "Which bioreactor runs used strain YX-006, and which clone of YX-006 was it?",
+  "gold_answer": "FB-014, FB-015, FB-017, FB-018, FB-019, FB-020, FB-021, FB-022, FB-023, FB-024, FB-025 (11 runs); clone c3",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-014",
+   "FB-015",
+   "FB-017",
+   "FB-018",
+   "FB-019",
+   "FB-020",
+   "FB-021",
+   "FB-022",
+   "FB-023",
+   "FB-024",
+   "FB-025",
+   "c3"
+  ],
+  "evidence": [
+   "corpus/notes/",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/spreadsheets/",
+   "corpus/strains/strain_registry.xlsx"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "id_resolution",
+   "implicit_context"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-02",
+  "tier": "L3",
+  "category": "join",
+  "question": "Rank the six C5-fraction fed-batches FB-012 to FB-017 by final xylitol (highest first).",
+  "gold_answer": "FB-013 (67.6) > FB-014 (67.3) > FB-017 (65.9) > FB-015 (64.3) > FB-016 (62.2) > FB-012 (19.6)",
+  "value": [
+   "FB-013",
+   "FB-014",
+   "FB-017",
+   "FB-015",
+   "FB-016",
+   "FB-012"
+  ],
+  "tolerance": null,
+  "grading": "ranking",
+  "key_points": [
+   "FB-013",
+   "FB-014",
+   "FB-017",
+   "FB-015",
+   "FB-016",
+   "FB-012"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-03",
+  "tier": "L3",
+  "category": "join",
+  "question": "What was the mean and standard deviation of final xylitol in the three baseline runs FB-001 to FB-003?",
+  "gold_answer": "145.9 +/- 2.7 g/L (FB-001 148.6, FB-002 145.8, FB-003 143.2)",
+  "value": 145.87666666666667,
+  "tolerance": 0.3,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-001.xlsx",
+   "corpus/spreadsheets/EV_FB-003.xlsx",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/meetings/minutes_2025-02-14.md"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-04",
+  "tier": "L3",
+  "category": "join",
+  "question": "Which person operated the most bioreactor runs, and how many?",
+  "gold_answer": "Mark Doherty (MD), 13 runs (EV 10, PN 2)",
+  "value": 13,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "Mark Doherty",
+   "13"
+  ],
+  "evidence": [
+   "corpus/notes/",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-05",
+  "tier": "L3",
+  "category": "join",
+  "question": "For which bioreactor runs is off-gas (O2/CO2) data available, and what do those runs have in common?",
+  "gold_answer": "FB-001, FB-002, FB-004, FB-005, FB-008, FB-011, FB-012, FB-013, FB-016, FB-017, FB-018, FB-019, FB-022, FB-023 (14 runs); they are exactly the runs in vessels R1 and R2 - the gas analyser only measures the R1/R2 exhaust streams, so no run in R3 or R4 has off-gas data.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-001",
+   "FB-002",
+   "FB-004",
+   "FB-005",
+   "FB-008",
+   "FB-011",
+   "FB-012",
+   "FB-013",
+   "FB-016",
+   "FB-017",
+   "FB-018",
+   "FB-019",
+   "FB-022",
+   "FB-023",
+   "R1",
+   "R2"
+  ],
+  "evidence": [
+   "corpus/offgas/",
+   "corpus/notes/",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-06",
+  "tier": "L3",
+  "category": "provenance",
+  "question": "Which strains were built on a YX-002 clone other than the one finally selected from the YX-002 screen?",
+  "gold_answer": "YX-003 and YX-004 were both built on YX-002 c1 (the first PCR-confirmed clone, before the screen); the screen selected YX-002 c3, and the team decided to keep c1 as the background.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "YX-003",
+   "YX-004",
+   "c1",
+   "c3"
+  ],
+  "evidence": [
+   "corpus/strains/construction_YX-003.md",
+   "corpus/strains/construction_YX-004.md",
+   "corpus/strains/strain_registry.xlsx",
+   "corpus/meetings/minutes_2025-03-14.md"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-07",
+  "tier": "L3",
+  "category": "join",
+  "question": "Compare the final xylitol of FB-022 (no enzyme) and FB-023 (enzyme added). What was the difference?",
+  "gold_answer": "FB-022 71.5 g/L, FB-023 74.7 g/L; difference +3.2 g/L (FB-023 higher)",
+  "value": 3.2,
+  "tolerance": 0.2,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/PN_FB022-023_lot_comparison.xlsx",
+   "corpus/notes/FB-023_PN.md"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-08",
+  "tier": "L3",
+  "category": "join",
+  "question": "Which C5 lot and what C5 fraction were used in the feed of FB-016?",
+  "gold_answer": "C5-2501, C5 70%",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "C5-2501",
+   "70"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/notes/FB-016_MD.md"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [
+   "number_date_format"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-09",
+  "tier": "L3",
+  "category": "rationale",
+  "question": "Which YX-005 clone was selected, and on what basis?",
+  "gold_answer": "c3: highest xylitol at 72 h in the 50 % C5 flask screen (c1 69.9, c2 66.5, c3 71.6 g/L; one flask per clone).",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "c3",
+   "72 h",
+   "50 %",
+   "71.6"
+  ],
+  "evidence": [
+   "corpus/strains/strain_registry.xlsx",
+   "corpus/notes/SF_screen_P4_PN.md",
+   "corpus/spreadsheets/PN_C5_tolerance_Apr2025.xlsx"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L3-10",
+  "tier": "L3",
+  "category": "join",
+  "question": "Which bioreactor runs did Priya Nair operate?",
+  "gold_answer": "FB-022, FB-023",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-022",
+   "FB-023"
+  ],
+  "evidence": [
+   "corpus/notes/"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-01",
+  "tier": "L4",
+  "category": "fault_diagnosis",
+  "question": "Why was FB-005 excluded from the strain comparison, and what evidence supports it?",
+  "gold_answer": "The R2 feed pump over-delivered by about 15 % (worn tubing): the feed balance showed 314 mL consumed vs 273 mL by the pump counter (DEV-2025-01); on 2025-03-26 the pump was found to deliver 2.30 mL/h at 2.00 mL/h setpoint and was recalibrated. FB-005 therefore received more glucose and xylose than planned.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "feed pump",
+   "15 %",
+   "314",
+   "273",
+   "DEV-2025-01"
+  ],
+  "evidence": [
+   "corpus/deviations/DEV-2025-01.md",
+   "corpus/notes/FB-005_EV.md",
+   "corpus/equipment/maintenance_log.csv",
+   "corpus/meetings/minutes_2025-04-11.md"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-02",
+  "tier": "L4",
+  "category": "fault_diagnosis",
+  "question": "What happened in FB-010 around 50 h, and how long is the gap in its online data?",
+  "gold_answer": "The lab UPS tripped (power failure): the R4 controller and feed pump were off and the feed was restarted by hand (DEV-2025-03, ~3.5 h without feed). The online log has no records between 49.3 h and 53.0 h (~3.7 h gap).",
+  "value": 3.7,
+  "tolerance": 0.3,
+  "grading": "key_points",
+  "key_points": [
+   "power",
+   "3.7 h",
+   "feed"
+  ],
+  "evidence": [
+   "corpus/online/FB010_R4.csv",
+   "corpus/notes/FB-010_MD.md",
+   "corpus/deviations/DEV-2025-03.md",
+   "corpus/equipment/maintenance_log.csv"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-03",
+  "tier": "L4",
+  "category": "fault_diagnosis",
+  "question": "Which P3 run has an unreliable dissolved-oxygen signal in the second half, and what is the evidence?",
+  "gold_answer": "FB-009 (R3, YX-003): pO2 falls steadily from about 73 % at 40 h to 38 % at 140 h, whereas its replicate FB-006 (same strain, same vessel) stays at about 81-67 % and the offline data of FB-009 are normal. The R3 pO2 probe showed slow response and low readings and its membrane was replaced on 2025-04-07 (maintenance log; minutes 2025-04-11).",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-009",
+   "drift",
+   "membrane",
+   "2025-04-07"
+  ],
+  "evidence": [
+   "corpus/online/FB009_R3.csv",
+   "corpus/online/FB006_R3.csv",
+   "corpus/equipment/maintenance_log.csv",
+   "corpus/meetings/minutes_2025-04-11.md"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-04",
+  "tier": "L4",
+  "category": "provenance",
+  "question": "Which C5 lot was FB-024 planned with, which lot was actually used, and how can this be shown from the data?",
+  "gold_answer": "Planned C5-2503 (run sheet and MD note); actually C5-2502 (MD 'Media & feeds' sheet, DEV-2025-04). The FB-024 feed sample contained 7.7 g/L formate - like the C5-2502 feed of FB-022 (7.7) and the 60 % of the C5-2502 CoA value (7.9 g/L), and unlike the C5-2503 feed of FB-025 (14.8; CoA-based 14.2 g/L).",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "C5-2503",
+   "C5-2502",
+   "7.7",
+   "formate"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/hplc/processed/HPLC_results_2025-06.xlsx",
+   "corpus/materials/CoA_C5-2502.md",
+   "corpus/materials/CoA_C5-2503.md",
+   "corpus/deviations/DEV-2025-04.md",
+   "corpus/reports/weekly_PN_2025-07-04.md"
+  ],
+  "hops": 4,
+  "set": "core",
+  "interop": [
+   "vocabulary",
+   "source_authority"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-05",
+  "tier": "L4",
+  "category": "provenance",
+  "question": "For sample FB005-S07, what xylitol value was first reported, what is the corrected value, and why did it change?",
+  "gold_answer": "First 103.88 g/L (SEQ-20250321), corrected 97.82 g/L from the re-run SEQ-20250409: the xylitol standard used in SEQ-20250321 was prepared from a partially hydrated batch, so xylitol results of that sequence were biased high (DEV-2025-02).",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "103.88",
+   "97.82",
+   "DEV-2025-02"
+  ],
+  "evidence": [
+   "corpus/hplc/processed/HPLC_results_2025-03.xlsx",
+   "corpus/hplc/raw/",
+   "corpus/deviations/DEV-2025-02.md"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "versioning"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-06",
+  "tier": "L4",
+  "category": "data_quality",
+  "question": "Is any xylitol value in Mark Doherty's master log inconsistent with the HPLC results? If so, which and why?",
+  "gold_answer": "Yes. (1) FB-015 S08 is logged as 490.7 g/L, but the HPLC result is 49.07 g/L - a transcription error (decimal point shifted, factor 10) that also breaks the time course of the run. (2) 8 values (FB-006 S04, S05, S06, S07; FB-007 S04, S05, S06, S07) still show the original results of HPLC sequence SEQ-20250321; they were superseded by the re-run SEQ-20250409 after DEV-2025-02 (biased xylitol standard), but the master log was not updated.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-015 S08",
+   "490.7",
+   "49.07",
+   "SEQ-20250321",
+   "not updated",
+   "FB-006",
+   "FB-007"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/hplc/processed/",
+   "corpus/deviations/DEV-2025-02.md"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "versioning",
+   "source_authority",
+   "number_date_format"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-07",
+  "tier": "L4",
+  "category": "fault_diagnosis",
+  "question": "Did the antifoam added to FB-014 affect dissolved oxygen? Quantify.",
+  "gold_answer": "Yes: antifoam was added at ~30 h (MD note); pO2 fell from about 79 % (27-30 h) to about 53 % (31-34 h), consistent with antifoam lowering the oxygen transfer (kLa).",
+  "value": 26.0,
+  "tolerance": 5,
+  "grading": "key_points",
+  "key_points": [
+   "30 h",
+   "79",
+   "53"
+  ],
+  "evidence": [
+   "corpus/notes/FB-014_MD.md",
+   "corpus/online/FB014_R3.csv"
+  ],
+  "hops": 2,
+  "set": "core",
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-08",
+  "tier": "L4",
+  "category": "rationale",
+  "question": "Why did FB-002 start more slowly than FB-001 and FB-003?",
+  "gold_answer": "The preculture was two days old (MD note), giving a lower start OD600 (1.36 vs 2.04 and 2.14) and lower dry weight at 4 h (3.77 vs 5.80 and 5.62 g/L); the final titre was nevertheless close to the others.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "preculture",
+   "1.36",
+   "3.77"
+  ],
+  "evidence": [
+   "corpus/notes/FB-002_MD.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/spreadsheets/EV_FB-001.xlsx",
+   "corpus/spreadsheets/EV_FB-003.xlsx"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "number_date_format"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L4-09",
+  "tier": "L4",
+  "category": "provenance",
+  "question": "Trace the lineage of YX-006 back to the parent strain, including the clones used and the genetic change at each step.",
+  "gold_answer": "YX-006 = YX-003-c3 + heterologous FDH (plasmid); YX-003 = YX-002-c1 + pTEF1-ZWF1 and pTEF1-GND1 (oxidative PPP for NADPH); YX-002 = YX-001 + second, integrated XYL1 copy (pTDH3); YX-001 = the lab host with plasmid-borne xylose reductase (XYL1).",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "YX-003-c3",
+   "YX-002-c1",
+   "FDH",
+   "ZWF1",
+   "GND1",
+   "XYL1"
+  ],
+  "evidence": [
+   "corpus/strains/construction_YX-006.md",
+   "corpus/strains/construction_YX-003.md",
+   "corpus/strains/construction_YX-002.md",
+   "corpus/strains/construction_YX-001.md",
+   "corpus/strains/strain_registry.xlsx"
+  ],
+  "hops": 4,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L5-01",
+  "tier": "L5",
+  "category": "synthesis",
+  "question": "In the P3 bioreactor comparison (FB-004 to FB-011, excluding FB-005, using corrected HPLC values), which engineered strain gave the highest mean final xylitol, by how much compared with the parent control, and how reliable is that difference?",
+  "gold_answer": "YX-004: 147.4 g/L vs control 139.6 g/L (+5.6 %); YX-003 143.0, YX-002 139.7 (FB-008 only, because FB-005 is excluded). The evidence is weak: only 1-2 runs per strain, a difference of 7.9 g/L against a run-to-run sd of about 2.7 g/L (baseline FB-001 to FB-003), and the control mean includes FB-010 (136.4 g/L), which had ~3.5 h without feed in the power cut (DEV-2025-03). Against FB-004 alone (142.8 g/L) the gain shrinks to +3.3 %. Round-1 values also had to be corrected for the HPLC standard error (DEV-2025-02).",
+  "value": 5.6,
+  "tolerance": 1.0,
+  "grading": "key_points",
+  "key_points": [
+   "YX-004",
+   "147.4",
+   "139.6",
+   "FB-010",
+   "few runs"
+  ],
+  "evidence": [
+   "corpus/hplc/processed/",
+   "corpus/lims/sample_register.csv",
+   "corpus/deviations/DEV-2025-01.md",
+   "corpus/deviations/DEV-2025-02.md",
+   "corpus/deviations/DEV-2025-03.md",
+   "corpus/meetings/minutes_2025-02-14.md",
+   "corpus/meetings/minutes_2025-04-11.md"
+  ],
+  "hops": 5,
+  "set": "core",
+  "interop": [
+   "versioning"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L5-02",
+  "tier": "L5",
+  "category": "synthesis",
+  "question": "Is the heterologous FDH needed for xylitol production at 70 % C5 fraction? Support the answer with flask and bioreactor data.",
+  "gold_answer": "Yes. In flasks at 70 % C5 the parent YX-001 made 1.5 g/L xylitol and did not grow (OD 2.8 at 72 h from OD 2.4), while the FDH strains grew and made xylitol. In the bioreactor, FB-012 (YX-003, no FDH, 70 % C5) stopped working by ~96 h (xylose accumulating, formate 7.2 g/L at the end) and finished at only 19.6 g/L xylitol, DW 3.0 g/L; with FDH at 70 % C5 the runs reached FB-015 64.3, FB-016 62.2, FB-017 65.9 g/L - FB-015 and FB-017 with YX-006, which is YX-003 plus FDH, i.e. the same background as FB-012.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "yes",
+   "formate",
+   "FB-012",
+   "19.6",
+   "FB-015"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/PN_C5_tolerance_Apr2025.xlsx",
+   "corpus/meetings/minutes_2025-05-02.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/notes/FB-012_MD.md",
+   "corpus/strains/construction_YX-006.md",
+   "corpus/meetings/minutes_2025-05-30.md"
+  ],
+  "hops": 5,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L5-03",
+  "tier": "L5",
+  "category": "synthesis",
+  "question": "In the P6 study with YX-006 (900 vs 500 rpm, feed A vs the more glucose-rich feed B), which condition was oxygen-limited, what is the evidence, and did it measurably reduce the final xylitol titre?",
+  "gold_answer": "FB-021 (500 rpm, feed B): its fed-phase pO2 median was 1 % (vs 74 / 41 / 52 % for FB-018/019/020), and ethanol re-appeared from 96 h (3.2 g/L at the end) while it stayed below detection in the other three runs - overflow/fermentative metabolism under O2 limitation. Final xylitol was 143.6 / 150.0 / 151.4 / 146.1 g/L; the 5.3 g/L lower titre of FB-021 vs FB-020 is a single-run comparison within the run-to-run scatter (baseline sd 2.7 g/L), so a titre loss is not demonstrated.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-021",
+   "1 %",
+   "ethanol",
+   "not significant"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-018.xlsx",
+   "corpus/spreadsheets/EV_FB-019.xlsx",
+   "corpus/spreadsheets/EV_FB-020.xlsx",
+   "corpus/spreadsheets/EV_FB-021.xlsx",
+   "corpus/notes/FB-021_EV.md",
+   "corpus/online/",
+   "corpus/meetings/minutes_2025-06-20.md",
+   "corpus/meetings/minutes_2025-02-14.md"
+  ],
+  "hops": 5,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L5-04",
+  "tier": "L5",
+  "category": "synthesis",
+  "question": "Taking the lot mix-up into account, what can be concluded about the effect of the enzyme on lot C5-2503?",
+  "gold_answer": "Nothing: the only real C5-2503 run is FB-025 (with enzyme, 69.87 g/L); FB-024, meant as the no-enzyme C5-2503 control, was fed with C5-2502 (71.14 g/L), so there is no C5-2503 run without enzyme to compare against (a repeat was planned for August). For C5-2502 the enzyme changed final xylitol by +3.2 g/L (FB-023 vs FB-022, single runs).",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "cannot",
+   "FB-025",
+   "FB-024",
+   "C5-2502"
+  ],
+  "evidence": [
+   "corpus/deviations/DEV-2025-04.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/spreadsheets/PN_FB022-023_lot_comparison.xlsx",
+   "corpus/meetings/minutes_2025-07-11.md"
+  ],
+  "hops": 4,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L5-05",
+  "tier": "L5",
+  "category": "data_quality",
+  "question": "Do any HPLC results of FB-012 or FB-013 break the time course in a way that suggests a sample mix-up? Explain.",
+  "gold_answer": "Yes, sample S07 (72 h) of both runs. FB-012 S07 shows xylitol 39.87 g/L (S06 23.29, S08 25.3) and no formate although formate is present in all its other fed-phase samples; FB-013 S07 shows xylitol 26.96 g/L (S06 27.6, S08 46.69) and formate 4.32 g/L although all other FB-013 samples have at most 0.08 g/L formate. Each S07 looks like the other run's sample, so the two tubes were most likely swapped before HPLC (both sampled the same morning, 2025-05-08 09:30 and 2025-05-08 10:05). OD and dry weight of S07 fit their own runs.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "S07",
+   "swap",
+   "FB-012",
+   "FB-013",
+   "formate"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/hplc/processed/HPLC_results_2025-05.xlsx",
+   "corpus/lims/sample_register.csv"
+  ],
+  "hops": 3,
+  "set": "core",
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "L5-06",
+  "tier": "L5",
+  "category": "synthesis",
+  "question": "Which bioreactor run reached the highest final xylitol in the whole campaign, and is that result trustworthy?",
+  "gold_answer": "FB-005 (153.7 g/L), but it is not trustworthy: its feed pump over-delivered by ~15 % (DEV-2025-01), so it received more substrate and was excluded. The highest valid run is FB-020 (151.4 g/L), followed by FB-019 (150.0), FB-001 (148.6) - differences between these are within run-to-run scatter.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB-005",
+   "153.7",
+   "DEV-2025-01",
+   "FB-020"
+  ],
+  "evidence": [
+   "corpus/hplc/processed/",
+   "corpus/lims/sample_register.csv",
+   "corpus/deviations/",
+   "corpus/spreadsheets/"
+  ],
+  "hops": 4,
+  "set": "core",
+  "interop": [
+   "versioning",
+   "source_authority"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-01",
+  "tier": "U",
+  "category": "unanswerable",
+  "question": "What was the dissolved CO2 concentration in the broth of FB-019?",
+  "gold_answer": "Not available: dissolved CO2 was not measured. Only the exhaust-gas CO2 (%) was recorded for FB-019 (off-gas file).",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "not measured"
+  ],
+  "evidence": [
+   "corpus/offgas/GA4_fb019_R2.xlsx",
+   "corpus/sops/"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-02",
+  "tier": "U",
+  "category": "unanswerable",
+  "question": "What succinate concentration was measured in FB-006?",
+  "gold_answer": "Not available: FB-006 (March 2025) samples were analysed with SOP-ANA-003 v1, which does not include succinate; succinate was only added in v2, effective 2025-06-01.",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "not measured",
+   "v1",
+   "2025-06-01"
+  ],
+  "evidence": [
+   "corpus/sops/SOP-ANA-003_v1.md",
+   "corpus/sops/SOP-ANA-003_v2.md",
+   "corpus/hplc/processed/HPLC_results_2025-03.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [
+   "versioning"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-03",
+  "tier": "U",
+  "category": "unanswerable",
+  "question": "What was the respiratory quotient (RQ) of FB-006 during the fed phase?",
+  "gold_answer": "Not available: there is no off-gas data for FB-006 (vessel R3); off-gas was only recorded for R1 and R2 runs.",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "no off-gas",
+   "R3"
+  ],
+  "evidence": [
+   "corpus/offgas/"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-04",
+  "tier": "U",
+  "category": "unanswerable",
+  "question": "What final xylitol titre did run FB-026 reach?",
+  "gold_answer": "There is no run FB-026 in the records (runs go from FB-001 to FB-025); the minutes of 2025-07-11 only plan a repeat for August.",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "no such run"
+  ],
+  "evidence": [
+   "corpus/lims/sample_register.csv",
+   "corpus/meetings/minutes_2025-07-11.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-05",
+  "tier": "U",
+  "category": "false_premise",
+  "question": "Why was strain YX-004 dropped after the P3 comparison?",
+  "gold_answer": "False premise: YX-004 was not dropped. The registry lists it as 'on hold', and the 2025-04-11 minutes decided to keep it on hold.",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "not dropped",
+   "on hold"
+  ],
+  "evidence": [
+   "corpus/strains/strain_registry.xlsx",
+   "corpus/meetings/minutes_2025-04-11.md"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-06",
+  "tier": "U",
+  "category": "unanswerable",
+  "question": "How much did lot C5-2502 of the C5 fraction cost?",
+  "gold_answer": "Not available: no document gives prices or costs for the C5 lots.",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "not documented"
+  ],
+  "evidence": [
+   "corpus/materials/"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "U-07",
+  "tier": "U",
+  "category": "false_premise",
+  "question": "What final xylitol did the C5-2503 run without enzyme reach?",
+  "gold_answer": "There is no such run: FB-024 was planned as the no-enzyme C5-2503 run but was fed with C5-2502 (DEV-2025-04). The only C5-2503 run, FB-025, had enzyme.",
+  "value": null,
+  "tolerance": null,
+  "grading": "unanswerable",
+  "key_points": [
+   "no such run",
+   "FB-024",
+   "C5-2502"
+  ],
+  "evidence": [
+   "corpus/deviations/DEV-2025-04.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 1,
+  "set": "core",
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-01",
+  "set": "IO",
+  "tier": "L2",
+  "category": "lookup",
+  "question": "What xylitol concentration was measured in FB-006 at 96 h?",
+  "gold_answer": "112.63 g/L (sample FB006-S08; written as run 'FB06', sample 'S08', column 'Xol' in the MD master log and as 'FB006-S08' / 'Xylitol' in the HPLC results).",
+  "value": 112.63,
+  "tolerance": 0.02,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/hplc/processed/HPLC_results_2025-03.xlsx",
+   "corpus/lims/sample_register.csv"
+  ],
+  "hops": 2,
+  "interop": [
+   "id_resolution",
+   "vocabulary"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-02",
+  "set": "IO",
+  "tier": "L2",
+  "category": "lookup",
+  "question": "What glycerol concentration was measured in FB-002 at 23.5 h?",
+  "gold_answer": "Below the detection limit: the MD master log shows '<0.05' and the HPLC results flag it '<LOD' (LOD 0.02-0.05 g/L in the vial). It was measured, so it is not missing, and it should not be reported as 0 or as a number.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "below detection",
+   "<0.05"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/hplc/processed/HPLC_results_2025-02.xlsx",
+   "corpus/sops/SOP-ANA-003_v1.md"
+  ],
+  "hops": 2,
+  "interop": [
+   "lod_encoding",
+   "id_resolution"
+  ],
+  "trap": "0 g/L, or 'not measured'",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-03",
+  "set": "IO",
+  "tier": "L2",
+  "category": "lookup",
+  "question": "On which date and at what time was FB-002 inoculated?",
+  "gold_answer": "03 February 2025, 10:15 (2025-02-03). MD writes dates as dd/mm/yy ('03/02/25' in his note and master log), which must not be read as month/day; the LIMS register confirms the date.",
+  "value": "2025-02-03",
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "2025-02-03",
+   "10:15"
+  ],
+  "evidence": [
+   "corpus/notes/FB-002_MD.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/lims/sample_register.csv"
+  ],
+  "hops": 2,
+  "interop": [
+   "number_date_format"
+  ],
+  "trap": "02 March 2025 (month/day read the wrong way round)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-04",
+  "set": "IO",
+  "tier": "L3",
+  "category": "time_series",
+  "question": "What was the dissolved-oxygen (pO2) reading in FB-021 at 47.5 h after inoculation?",
+  "gold_answer": "About 32.6 % (record 2025-06-11T10:30:00). In the VesselView export Elapsed_h counts from the logger start, which was 15.8 h before inoculation, so the row with Elapsed_h = 47.5 is actually 31.7 h after inoculation (pO2 2.4 %). Inoculation time from the LIMS S01 sample / run sheet.",
+  "value": 32.6,
+  "tolerance": 2.0,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/online/FB021_R4.csv",
+   "corpus/lims/sample_register.csv",
+   "corpus/spreadsheets/EV_FB-021.xlsx",
+   "corpus/equipment/reactor_setup.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": "2.4 % (row with Elapsed_h = 47.5)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-05",
+  "set": "IO",
+  "tier": "L3",
+  "category": "time_series",
+  "question": "How many hours after inoculation did the exhaust CO2 of FB-001 peak, and what was the peak value?",
+  "gold_answer": "At about 3.5 h after inoculation (03.02.2025 13:00), CO2 1.17 %, during the glucose batch phase. Inoculation is in the BioCtrl header (03 Feb 2025 09:30); the analyser RelTime counts from the analyser start (2025-02-02 17:17), so RelTime/3600 = 19.7 h is not process time.",
+  "value": 3.5,
+  "tolerance": 0.5,
+  "grading": "key_points",
+  "key_points": [
+   "3.5 h",
+   "1.17 %"
+  ],
+  "evidence": [
+   "corpus/offgas/GA4_fb001_R1.xlsx",
+   "corpus/online/FB-001_R1.txt",
+   "corpus/equipment/reactor_setup.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": "19.7 h (analyser RelTime)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-06",
+  "set": "IO",
+  "tier": "L3",
+  "category": "lookup",
+  "question": "What was the arabinose concentration at the end of FB-016?",
+  "gold_answer": "6.39 g/L (FB016-S11, HPLC results). The MD master log has no arabinose column, so the value is only in the HPLC results workbook; arabinose comes in with the C5 fraction and is not consumed.",
+  "value": 6.39,
+  "tolerance": 0.02,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/hplc/processed/HPLC_results_2025-05.xlsx",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 2,
+  "interop": [
+   "source_authority",
+   "id_resolution"
+  ],
+  "trap": "'not measured' (because the MD log lacks the column)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-07",
+  "set": "IO",
+  "tier": "L3",
+  "category": "provenance",
+  "question": "What is the valid xylitol concentration of sample FB006-S05?",
+  "gold_answer": "37.54 g/L from the re-run sequence SEQ-20250409. The first result (41.63 g/L, SEQ-20250321) was superseded after DEV-2025-02 (biased xylitol standard); the MD master log still shows the old value (41.63).",
+  "value": 37.54,
+  "tolerance": 0.02,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/hplc/processed/HPLC_results_2025-03.xlsx",
+   "corpus/deviations/DEV-2025-02.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 3,
+  "interop": [
+   "versioning",
+   "source_authority"
+  ],
+  "trap": "41.63 g/L (superseded)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-08",
+  "set": "IO",
+  "tier": "L3",
+  "category": "provenance",
+  "question": "Was YX-003 built on the same YX-002 clone that was tested in the bioreactor runs FB-005 and FB-008?",
+  "gold_answer": "No. YX-003 was built on YX-002-c1 (construction record, registry parent), while FB-005 and FB-008 used YX-002 clone c3 (EV workbooks: 'YX-002 (clone c3)'). The same clone is written 'YX-002-c1', 'YX-002 c1' and 'clone c1' in different documents.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "no",
+   "c1",
+   "c3"
+  ],
+  "evidence": [
+   "corpus/strains/construction_YX-003.md",
+   "corpus/strains/strain_registry.xlsx",
+   "corpus/spreadsheets/EV_FB-005.xlsx",
+   "corpus/spreadsheets/EV_FB-008.xlsx"
+  ],
+  "hops": 3,
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-09",
+  "set": "IO",
+  "tier": "L2",
+  "category": "lookup",
+  "question": "What final dry weight did Mark Doherty write in his FB-016 note, and does it agree with his master log?",
+  "gold_answer": "3.3 g/L - written '3,3' with a decimal comma in the note; the master log gives 3.28 g/L, so they agree.",
+  "value": 3.3,
+  "tolerance": 0.05,
+  "grading": "key_points",
+  "key_points": [
+   "3.3",
+   "agree"
+  ],
+  "evidence": [
+   "corpus/notes/FB-016_MD.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 2,
+  "interop": [
+   "number_date_format"
+  ],
+  "trap": "33 g/L (comma read as a thousands separator)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-10",
+  "set": "IO",
+  "tier": "L3",
+  "category": "calculation",
+  "question": "How much base (2 M KOH) was added in FB-002 and in FB-006?",
+  "gold_answer": "FB-002 (R2, BioCtrl): 300 base-pump counts x 0.05 mL/count = 15.0 mL. FB-006 (R3, VesselView): 15.45 mL, logged directly in mL (BASE_mL). The two controllers log base differently; the pump calibration is in the reactor set-up document.",
+  "value": [
+   15.0,
+   15.45
+  ],
+  "tolerance": 0.2,
+  "grading": "key_points",
+  "key_points": [
+   "15.0",
+   "15.45"
+  ],
+  "evidence": [
+   "corpus/online/FB-002_R2.txt",
+   "corpus/online/FB006_R3.csv",
+   "corpus/equipment/reactor_setup.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "units_conversion",
+   "vocabulary"
+  ],
+  "trap": "300 mL (counts taken as mL)",
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-11",
+  "set": "IO",
+  "tier": "L4",
+  "category": "provenance",
+  "question": "The MD master log has a row 'FB15 / S08'. Which LIMS sample is this, when was it taken, and in which HPLC sequence was it analysed?",
+  "gold_answer": "LIMS sample FB015-S08 (run FB-015, 96 h), sampled 2025-05-09 11:15, analysed on 2025-05-13 in sequence SEQ-20250513 (method v1). This is also the row with the decimal-point slip in the master log.",
+  "value": null,
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "FB015-S08",
+   "2025-05-09",
+   "SEQ-20250513"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/lims/sample_register.csv",
+   "corpus/hplc/processed/HPLC_results_2025-05.xlsx",
+   "corpus/hplc/raw/"
+  ],
+  "hops": 3,
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-12",
+  "set": "IO",
+  "tier": "L3",
+  "category": "provenance",
+  "question": "PN's April flask note lists 'YX-006 c3, 70 % C5' with 64.9 g/L xylitol. Which flask is that, and what OD600 did it reach at 72 h?",
+  "gold_answer": "Flask SF-033 (sheet YX-006 of PN_C5_tolerance_Apr2025.xlsx, 'Tolerance, 70 % C5'); OD600 18.46 at 72 h. The minutes of 2025-05-02 refer to the same flask by its ID.",
+  "value": 18.46,
+  "tolerance": 0.1,
+  "grading": "key_points",
+  "key_points": [
+   "SF-033",
+   "18.46"
+  ],
+  "evidence": [
+   "corpus/notes/SF_screen_P4_PN.md",
+   "corpus/spreadsheets/PN_C5_tolerance_Apr2025.xlsx",
+   "corpus/meetings/minutes_2025-05-02.md"
+  ],
+  "hops": 2,
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "IO-13",
+  "set": "IO",
+  "tier": "L4",
+  "category": "inference",
+  "question": "Which clone of YX-005 was used in FB-013?",
+  "gold_answer": "Clone c3. MD's records only say 'YX-005'; the clone follows from the strain registry / construction record (clone c3 selected after the flask screen on 2025-04-29), which was before FB-013 started on 2025-05-05.",
+  "value": "c3",
+  "tolerance": null,
+  "grading": "key_points",
+  "key_points": [
+   "c3"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/notes/FB-013_MD.md",
+   "corpus/strains/strain_registry.xlsx",
+   "corpus/strains/construction_YX-005.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "implicit_context",
+   "number_date_format"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-01",
+  "set": "CA",
+  "tier": "L2",
+  "category": "calculation",
+  "question": "Estimate the specific growth rate of FB-001 in the batch phase from the dry weight between the first two samples.",
+  "gold_answer": "mu = ln(5.80/0.82) / (4 - 0.1 h) = 0.50 1/h (OD600 gives a similar value).",
+  "value": 0.502,
+  "tolerance": 0.03,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-001.xlsx"
+  ],
+  "hops": 1,
+  "interop": [],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-02",
+  "set": "CA",
+  "tier": "L2",
+  "category": "calculation",
+  "question": "Recompute the xylitol concentration of sample FB018-S06 from the raw HPLC sequence file.",
+  "gold_answer": "6.1226 g/L in the vial x dilution 10 = 61.23 g/L (SEQ-20250613.csv); this matches the processed result.",
+  "value": 61.23,
+  "tolerance": 0.02,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/hplc/raw/SEQ-20250613.csv",
+   "corpus/hplc/processed/HPLC_results_2025-06.xlsx"
+  ],
+  "hops": 2,
+  "interop": [
+   "units_conversion"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-03",
+  "set": "CA",
+  "tier": "L3",
+  "category": "calculation",
+  "question": "How much feed (mL) was added to FB-006?",
+  "gold_answer": "Balance loss 805.42 - 484.60 = 320.8 g; divided by the Feed A density 1.15 g/mL (SOP-FB-001) = 279 mL. VesselView has no feed pump counter, so the balance is the only record.",
+  "value": 279.0,
+  "tolerance": 2.0,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/online/FB006_R3.csv",
+   "corpus/sops/SOP-FB-001_v3.md",
+   "corpus/equipment/reactor_setup.md",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 3,
+  "interop": [
+   "units_conversion"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-04",
+  "set": "CA",
+  "tier": "L3",
+  "category": "calculation",
+  "question": "Check the claim in DEV-2025-01 that the R2 feed pump over-delivered by about 15 % in FB-005, using the raw records.",
+  "gold_answer": "Pump: 2728 counts x 0.10 mL = 272.8 mL. Balance: (769.3 - 408.5) g / 1.15 g/mL = 313.7 mL. Ratio 1.150, i.e. 15 % more delivered than counted - the claim holds.",
+  "value": 15.0,
+  "tolerance": 1.0,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/online/FB-005_R2.txt",
+   "corpus/spreadsheets/EV_FB-005.xlsx",
+   "corpus/sops/SOP-FB-001_v3.md",
+   "corpus/equipment/reactor_setup.md",
+   "corpus/deviations/DEV-2025-01.md"
+  ],
+  "hops": 4,
+  "interop": [
+   "units_conversion"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-05",
+  "set": "CA",
+  "tier": "L3",
+  "category": "calculation",
+  "question": "At most, how much extra xylose (g per litre of feed) could the enzyme release from the FB-023 feed, if it hydrolysed all xylo-oligosaccharides? Compare it with the xylose in that feed.",
+  "gold_answer": "The feed is 60 % of lot C5-2502, whose CoA lists 42.82 g/L xylo-oligosaccharides (xylose equivalents): 0.6 x 42.82 = 25.7 g/L of feed, about 18 % on top of the 140 g/L xylose the feed is topped up to (SOP). Oligomers are not measured by the HPLC method, so the actual release was not verified.",
+  "value": 25.7,
+  "tolerance": 0.5,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/materials/CoA_C5-2502.md",
+   "corpus/sops/SOP-FB-001_v3.md",
+   "corpus/notes/FB-023_PN.md",
+   "corpus/sops/SOP-ANA-003_v2.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "vocabulary"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-06",
+  "set": "CA",
+  "tier": "L4",
+  "category": "calculation",
+  "question": "Calculate the respiratory quotient (RQ) of FB-018 during the fed phase (after 30 h) from the off-gas data.",
+  "gold_answer": "With an inert-gas balance (inlet 20.95 % O2 / 0.04 % CO2; outlet dry gas): RQ = (yCO2,out*f - yCO2,in) / (yO2,in - yO2,out*f), f = (1 - yO2,in - yCO2,in)/(1 - yO2,out - yCO2,out). Median over the fed phase = 1.80 (interquartile range 1.60-2.10). The O2 difference over the reactor is only ~0.1 %, so single cycles are noisy. RQ > 1 is expected: xylose reductase takes NAD(P)H that would otherwise be reoxidised with O2.",
+  "value": 1.8,
+  "tolerance": 0.15,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/offgas/GA4_fb018_R1.xlsx",
+   "corpus/online/FB-018_R1.txt",
+   "corpus/equipment/reactor_setup.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "time_alignment"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-07",
+  "set": "CA",
+  "tier": "L4",
+  "category": "calculation",
+  "question": "What concentration of undissociated formic acid was present at the end of FB-012?",
+  "gold_answer": "Formate at the end was 7.23 g/L (MD master log); at the controlled pH 5.5 (SOP) and pKa 3.75 the undissociated fraction is 1/(1 + 10^(5.5 - 3.75)) = 0.0175, so about 0.13 g/L. The pKa of formic acid is general chemistry, not in the corpus.",
+  "value": 0.126,
+  "tolerance": 0.01,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/sops/SOP-FB-001_v3.md"
+  ],
+  "hops": 2,
+  "interop": [
+   "vocabulary"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-08",
+  "set": "CA",
+  "tier": "L5",
+  "category": "calculation",
+  "question": "Estimate the xylitol yield on consumed xylose (g/g) for FB-018 with a mass balance, and say whether it is physically plausible.",
+  "gold_answer": "Xylose fed: 275 mL feed (balance loss / 1.15 g/mL) x 307.9 g/L (feed sample FB018-F) = 84.8 g. Xylose left: 12.55 g/L x 500 mL in the reactor plus 0.30 g removed in 7 mL samples = 6.6 g. Xylitol formed: 143.6 g/L x 500 mL + 3.23 g in samples = 75.0 g. Yield = 75.0/78.2 = 0.96 g/g. Plausible: the stoichiometric maximum is 1.01 g/g (152.15/150.13), and the estimate is within the measurement error of it (volumes are recorded to 10 mL, HPLC ~3 %).",
+  "value": 0.959,
+  "tolerance": 0.05,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-018.xlsx",
+   "corpus/hplc/processed/HPLC_results_2025-06.xlsx",
+   "corpus/sops/SOP-FB-001_v3.md"
+  ],
+  "hops": 4,
+  "interop": [
+   "units_conversion"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-09",
+  "set": "CA",
+  "tier": "L3",
+  "category": "calculation",
+  "question": "In the P3 comparison (excluding FB-005), which strain left the least residual xylose at the end (mean of its runs)?",
+  "gold_answer": "YX-003 (14.0 g/L); YX-001 16.1, YX-002 14.7, YX-004 14.7 g/L. Residual xylose reflects how much of the fed xylose a strain converted, so it is a more direct readout of conversion capacity than the final titre.",
+  "value": 14.0,
+  "tolerance": 0.2,
+  "grading": "key_points",
+  "key_points": [
+   "YX-003",
+   "14.0"
+  ],
+  "evidence": [
+   "corpus/hplc/processed/",
+   "corpus/lims/sample_register.csv",
+   "corpus/deviations/DEV-2025-01.md"
+  ],
+  "hops": 3,
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "CA-10",
+  "set": "CA",
+  "tier": "L4",
+  "category": "statistics",
+  "question": "Using the run-to-run scatter of the three baseline runs, how many runs per strain would be needed to detect a 5 g/L difference in final xylitol between two strains (two-sided alpha 0.05, 80 % power)?",
+  "gold_answer": "sd = 2.7 g/L (FB-001 to FB-003, n = 3). n = 2((1.96 + 0.84) sd / 5)^2 = 4.6, i.e. about 5 runs per strain. With only 3 baseline runs the sd itself is very uncertain, so this is a lower bound; the P3 comparison used 1-2 runs per strain.",
+  "value": 5,
+  "tolerance": 1,
+  "grading": "numeric",
+  "key_points": [],
+  "evidence": [
+   "corpus/spreadsheets/EV_FB-001.xlsx",
+   "corpus/spreadsheets/EV_FB-003.xlsx",
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx"
+  ],
+  "hops": 3,
+  "interop": [
+   "id_resolution"
+  ],
+  "trap": null,
+  "rubric": null,
+  "penalties": null
+ },
+ {
+  "id": "XD-01",
+  "set": "XD",
+  "tier": "L5",
+  "category": "experiment_design",
+  "question": "Based on all the data so far, what should the team try next? Propose up to five experiments, and for each give the evidence that motivates it and what result would change a decision.",
+  "gold_answer": "Any well-argued subset of the rubric items; at least three grounded in the corpus evidence, with no penalised claim.",
+  "value": null,
+  "tolerance": null,
+  "grading": "rubric",
+  "key_points": [
+   "R1",
+   "R2",
+   "R3",
+   "R4",
+   "R5",
+   "R6",
+   "R7",
+   "R8"
+  ],
+  "evidence": [
+   "corpus/"
+  ],
+  "hops": 6,
+  "interop": [
+   "source_authority",
+   "versioning"
+  ],
+  "trap": null,
+  "rubric": [
+   {
+    "id": "R1",
+    "suggestion": "Repeat the C5-2503 run without enzyme (ideally with replicates).",
+    "evidence": "FB-024 was fed C5-2502 by mistake (DEV-2025-04), so lot C5-2503 has no no-enzyme run; the 2025-07-11 minutes plan a repeat.",
+    "simulator_check": "Expected enzyme effect at 5 U/L on C5-2503 only +1.4 g/L, below single-run scatter: one repeat run will not settle it."
+   },
+   {
+    "id": "R2",
+    "suggestion": "Re-run the strain comparison with more replicates per strain (balanced over vessels/days) and a more sensitive readout (residual xylose, xylitol at 48-72 h, or a higher feed rate).",
+    "evidence": "Differences between strains (control 139.6, best 147.4 g/L) are of the order of the run-to-run sd (2.7 g/L); only 1-2 runs per strain; YX-002 has a single valid run (FB-008); the control includes the power-cut run FB-010.",
+    "simulator_check": "True YX-003 vs YX-001 difference 6.04 g/L with run-to-run sd 4.82 g/L: about 10 runs per strain needed."
+   },
+   {
+    "id": "R3",
+    "suggestion": "Increase the xylose supply (higher feed rate or more concentrated xylose) - titre is limited by the xylose fed.",
+    "evidence": "Feed A carries 300 g/L xylose and gives ~140-150 g/L xylitol; the C5 feeds are topped up to only 140 g/L xylose and give ~62-75 g/L, even with FDH strains whose formate is fully removed; residual xylose stays low (~7-18 g/L), so most fed xylose is converted.",
+    "simulator_check": "Feed A at 3 instead of 2 mL/h: YX-006 145 -> 168 g/L, and the YX-003 vs YX-001 difference grows from 5.6 to 8.9 g/L."
+   },
+   {
+    "id": "R4",
+    "suggestion": "With the glucose-rich feed B keep oxygen non-limiting: >= 700-900 rpm or a pO2-controlled stirrer cascade.",
+    "evidence": "FB-021 (500 rpm, feed B) had a fed-phase pO2 median of 1 % and ethanol re-appeared late; FB-020 (900 rpm) stayed at 52 %.",
+    "simulator_check": "Feed B: 500 rpm 143 g/L with 6.3 g/L ethanol; 700 rpm 148, 900 rpm 148, pO2 cascade at 20 % 148 g/L."
+   },
+   {
+    "id": "R5",
+    "suggestion": "Push the C5 fraction above 70 % (up to undiluted) with YX-006, and test lot C5-2503 (more formic acid) at 70 %.",
+    "evidence": "With FDH, 70 % C5 (FB-015 64.3, FB-017 65.9 g/L) performs like 50 % (FB-014 67.3) and formate is removed (end formate below detection (<0.05 g/L) in FB-014, FB-015 and FB-017); C5-2503 has the highest formic acid in its CoA.",
+    "simulator_check": "YX-006 on C5-2501: 70 % 68, 80 % 67, 90 % 66, 100 % 68 g/L - no penalty up to 100 %."
+   },
+   {
+    "id": "R6",
+    "suggestion": "Do an enzyme dose-response and measure the oligomers directly (e.g. acid hydrolysis), since the HPLC method does not see them.",
+    "evidence": "The +3.2 g/L of FB-023 vs FB-022 is a single-run difference within scatter; the CoAs list 29-43 g/L oligomers, i.e. up to ~26 g/L extra xylose in a 60 % feed.",
+    "simulator_check": "C5-2502: no enzyme 70, 5 U/L 72, 20 U/L 76 g/L."
+   },
+   {
+    "id": "R7",
+    "suggestion": "Test PN's idea that the PPP strain (YX-003) needs more glucose to show its NADPH advantage: YX-001 vs YX-003 on feed B.",
+    "evidence": "PN weekly report 2025-03-14; the P6 feed-B runs used only YX-006.",
+    "simulator_check": "Informative but negative: YX-003 advantage on feed B +2.8 g/L vs on feed A +5.6 g/L."
+   },
+   {
+    "id": "R8",
+    "suggestion": "Close analytical gaps: analyse C5 runs with HPLC v2 (succinate, furfural, HMF), add a viability measurement, and repeat the single YX-002 run.",
+    "evidence": "P5 C5 runs were analysed with v1 (no furans); FB-012's death is only inferred from xylose accumulation; YX-002 rests on FB-008 alone.",
+    "simulator_check": "Not simulated (measurement gap, not a process change)."
+   }
+  ],
+  "penalties": [
+   "Uses FB-005 as valid data (excluded, DEV-2025-01).",
+   "Uses superseded SEQ-20250321 xylitol values or the 490.7 g/L slip in the MD log.",
+   "States that a strain is clearly better than the parent from the P3 data without addressing the scatter.",
+   "States that the enzyme clearly increases xylitol, or treats FB-024 as a C5-2503 run.",
+   "Recommends unbuffered flasks or a strain without FDH for >= 50 % C5."
+  ]
+ },
+ {
+  "id": "XD-02",
+  "set": "XD",
+  "tier": "L5",
+  "category": "experiment_design",
+  "question": "The team wants to show in the bioreactor that the PPP strain YX-003 makes more xylitol than the parent YX-001. Design that experiment (conditions, readout, number of runs, controls) and justify each choice from the data.",
+  "gold_answer": "Key elements: (1) replicates - the measured difference so far is +3.4 g/L against a run-to-run sd of 2.7 g/L, so ~10 runs per strain (power calculation), not 1-2; (2) make xylose conversion, not xylose supply, limiting - higher feed rate or xylose concentration - and use residual xylose and xylitol at 48-72 h as readouts besides final titre; (3) balance strains over vessels R1-R4 and days, same feed batch, and keep pO2 non-limiting (900 rpm); (4) exclude or repeat runs with deviations (feed pump, power cut, probe drift) and use re-run-corrected HPLC values.",
+  "value": null,
+  "tolerance": null,
+  "grading": "rubric",
+  "key_points": [
+   "replicates",
+   "feed rate",
+   "residual xylose",
+   "balanced vessels"
+  ],
+  "evidence": [
+   "corpus/"
+  ],
+  "hops": 5,
+  "interop": [
+   "source_authority"
+  ],
+  "trap": null,
+  "rubric": [
+   {
+    "id": "D1",
+    "suggestion": "replicates from a power calculation",
+    "evidence": "sd 2.7 g/L, difference +3.4 g/L",
+    "simulator_check": "10 runs per strain at standard conditions"
+   },
+   {
+    "id": "D2",
+    "suggestion": "higher xylose supply so that conversion capacity limits",
+    "evidence": "titre follows the xylose fed; residual xylose low",
+    "simulator_check": "difference grows from 5.6 to 8.9 g/L at 3 mL/h"
+   },
+   {
+    "id": "D3",
+    "suggestion": "residual xylose / intermediate xylitol as readouts",
+    "evidence": "P3 residual xylose: lowest for YX-003",
+    "simulator_check": "residual xylose at 3 mL/h: YX-001 25.6 vs YX-003 16.6 g/L"
+   },
+   {
+    "id": "D4",
+    "suggestion": "balanced vessel/day assignment, non-limiting O2, exclude deviation runs",
+    "evidence": "vessel kLa differ, FB-005/FB-010/FB-009 deviations",
+    "simulator_check": "Not simulated."
+   }
+  ],
+  "penalties": [
+   "Relies on final titre from 1-2 runs per strain.",
+   "Uses FB-005 or superseded HPLC values."
+  ]
+ },
+ {
+  "id": "XD-03",
+  "set": "XD",
+  "tier": "L4",
+  "category": "experiment_design",
+  "question": "Is it worth running YX-006 on undiluted (100 %) C5 fraction? What does the existing data say, and what risk remains untested?",
+  "gold_answer": "Probably yes: with FDH, 70 % C5 gave the same titre as 50 % (FB-015 64.3, FB-017 65.9 vs FB-014 67.3 g/L) and formate was removed (end formate below detection (<0.05 g/L) in FB-014, FB-015 and FB-017 in the master log), while the strain without FDH (FB-012) failed at 70 %. Untested: fractions above 70 %, furfural/HMF and acetate at higher fractions (P5 runs were analysed with HPLC v1, which has no furans), and lot C5-2503, which has more formic acid. Titre will stay limited by the xylose in the feed unless the xylose top-up is raised.",
+  "value": null,
+  "tolerance": null,
+  "grading": "rubric",
+  "key_points": [
+   "70 % = 50 %",
+   "formate removed",
+   "furans not measured",
+   "C5-2503"
+  ],
+  "evidence": [
+   "corpus/spreadsheets/MD_fermentation_master_2025.xlsx",
+   "corpus/meetings/minutes_2025-05-30.md",
+   "corpus/sops/SOP-ANA-003_v1.md",
+   "corpus/materials/CoA_C5-2503.md",
+   "corpus/sops/SOP-FB-001_v3.md"
+  ],
+  "hops": 5,
+  "interop": [
+   "versioning",
+   "vocabulary"
+  ],
+  "trap": null,
+  "rubric": [
+   {
+    "id": "U1",
+    "suggestion": "worth it: no penalty 50 -> 70 % with FDH",
+    "evidence": "FB-013..017",
+    "simulator_check": "YX-006: 70 % 68, 80 % 67, 90 % 66, 100 % 68 g/L"
+   },
+   {
+    "id": "U2",
+    "suggestion": "risk: furans/acetate not measured in P5",
+    "evidence": "v1 method",
+    "simulator_check": "Not simulated."
+   },
+   {
+    "id": "U3",
+    "suggestion": "risk: C5-2503 formic acid",
+    "evidence": "CoA",
+    "simulator_check": "YX-006 on C5-2503: 60 % 68, 70 % 67, 80 % 66 g/L"
+   },
+   {
+    "id": "U4",
+    "suggestion": "titre stays xylose-limited",
+    "evidence": "C5 feeds topped up to 140 g/L",
+    "simulator_check": "See design_checks: titre flat with C5 fraction at constant xylose top-up."
+   }
+  ],
+  "penalties": [
+   "Claims the C5 fraction is the main limit on titre.",
+   "Ignores that FB-012 lacked FDH."
+  ]
+ }
+]

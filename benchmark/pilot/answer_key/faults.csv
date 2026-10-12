@@ -1,0 +1,9 @@
+code,run,where,truth,evidence
+F-HPLCSTD,several (P3 round 1),HPLC SEQ-20250321,xylitol standard prepared ~10 % too dilute -> xylitol results 10 % high,"DEV-2025-02, re-run sequence SEQ-20250409, TR results workbook comments; MD master log keeps the biased values"
+F-SWAP,FB-012 / FB-013,sample S07 (72 h),tubes swapped before HPLC; the HPLC values of the two samples are exchanged,only in the data: S07 breaks the trend of both runs
+F-INOC,FB-002,R2,"old preculture, low inoculum",MD lab note
+F-FEEDCAL,FB-005,R2,feed pump delivered 15 % more than logged,"EV lab note, DEV-2025-01, maintenance log, feed balance vs pump counter"
+F-DODRIFT,FB-009,R3,"pO2 membrane fouling, signal drifts down","online pO2 only, maintenance log (membrane replaced)"
+F-POWER,FB-010,R4,"UPS failure, logger and feed pump off","gap in online log, MD note, DEV-2025-03, maintenance log"
+F-ANTIFOAM,FB-014,R3,"foaming, antifoam added",MD note only; pO2 step in the online log
+F-WRONGLOT,FB-024,R3,feed made from C5-2502 instead of C5-2503,"MD media sheet (lot used) vs run plan/notes, feed-sample formate vs CoA, DEV-2025-04"

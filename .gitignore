@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Partner data - never commit (see data/README.md)
+data/partner/*
+!data/partner/.gitkeep
+
+# Plots made from partner data
+simulator/validation_bc18.png
+simulator/prediction_*.png
+
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*-eps-converted-to.pdf
+paper/frontiers.pdf
+paper/frontiers_SupplementaryMaterial.pdf

@@ -1,0 +1,366 @@
+{
+ "strains_feedA_2mLh": {
+  "YX-001": {
+   "Xol_end": 139.37,
+   "Xyl_end": 18.32,
+   "Xol_48h": 61.02,
+   "Xol_72h": 87.88,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 70.5,
+   "X_end": 11.81,
+   "V_end_mL": 495.0,
+   "xylitol_g": 72.13
+  },
+  "YX-002": {
+   "Xol_end": 144.41,
+   "Xyl_end": 13.32,
+   "Xol_48h": 62.63,
+   "Xol_72h": 90.24,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 71.1,
+   "X_end": 11.73,
+   "V_end_mL": 495.0,
+   "xylitol_g": 74.7
+  },
+  "YX-003": {
+   "Xol_end": 144.93,
+   "Xyl_end": 12.73,
+   "Xol_48h": 62.79,
+   "Xol_72h": 90.49,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 72.0,
+   "X_end": 11.89,
+   "V_end_mL": 495.0,
+   "xylitol_g": 75.0
+  },
+  "YX-004": {
+   "Xol_end": 144.29,
+   "Xyl_end": 13.43,
+   "Xol_48h": 62.54,
+   "Xol_72h": 90.16,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 71.9,
+   "X_end": 11.95,
+   "V_end_mL": 495.0,
+   "xylitol_g": 74.64
+  },
+  "YX-006": {
+   "Xol_end": 144.93,
+   "Xyl_end": 12.73,
+   "Xol_48h": 62.79,
+   "Xol_72h": 90.49,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 72.0,
+   "X_end": 11.89,
+   "V_end_mL": 495.0,
+   "xylitol_g": 75.0
+  }
+ },
+ "strains_feedA_3mLh": {
+  "YX-001": {
+   "Xol_end": 159.3,
+   "Xyl_end": 25.63,
+   "Xol_48h": 80.09,
+   "Xol_72h": 110.35,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 57.1,
+   "X_end": 13.71,
+   "V_end_mL": 638.0,
+   "xylitol_g": 105.47
+  },
+  "YX-002": {
+   "Xol_end": 167.42,
+   "Xyl_end": 17.55,
+   "Xol_48h": 82.8,
+   "Xol_72h": 114.25,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 58.5,
+   "X_end": 13.63,
+   "V_end_mL": 637.0,
+   "xylitol_g": 110.77
+  },
+  "YX-003": {
+   "Xol_end": 168.24,
+   "Xyl_end": 16.65,
+   "Xol_48h": 83.02,
+   "Xol_72h": 114.64,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 59.8,
+   "X_end": 13.81,
+   "V_end_mL": 638.0,
+   "xylitol_g": 111.35
+  },
+  "YX-004": {
+   "Xol_end": 167.24,
+   "Xyl_end": 17.73,
+   "Xol_48h": 82.62,
+   "Xol_72h": 114.11,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 59.7,
+   "X_end": 13.87,
+   "V_end_mL": 638.0,
+   "xylitol_g": 110.65
+  },
+  "YX-006": {
+   "Xol_end": 168.24,
+   "Xyl_end": 16.65,
+   "Xol_48h": 83.02,
+   "Xol_72h": 114.64,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 59.8,
+   "X_end": 13.81,
+   "V_end_mL": 638.0,
+   "xylitol_g": 111.35
+  }
+ },
+ "strains_feedB_2mLh": {
+  "YX-001": {
+   "Xol_end": 145.49,
+   "Xyl_end": 10.22,
+   "Xol_48h": 63.15,
+   "Xol_72h": 90.92,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 45.4,
+   "X_end": 17.36,
+   "V_end_mL": 502.0,
+   "xylitol_g": 76.22
+  },
+  "YX-003": {
+   "Xol_end": 148.28,
+   "Xyl_end": 7.4,
+   "Xol_48h": 64.35,
+   "Xol_72h": 92.52,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 46.5,
+   "X_end": 17.48,
+   "V_end_mL": 502.0,
+   "xylitol_g": 77.7
+  }
+ },
+ "yx006_feedB_agitation": {
+  "500 rpm": {
+   "Xol_end": 142.58,
+   "Xyl_end": 14.32,
+   "Xol_48h": 63.29,
+   "Xol_72h": 90.34,
+   "EtOH_fed_max": 6.35,
+   "pO2_fed_median": 0.6,
+   "X_end": 11.91,
+   "V_end_mL": 498.0,
+   "xylitol_g": 74.18
+  },
+  "700 rpm": {
+   "Xol_end": 148.26,
+   "Xyl_end": 7.45,
+   "Xol_48h": 64.35,
+   "Xol_72h": 92.52,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 27.1,
+   "X_end": 17.37,
+   "V_end_mL": 502.0,
+   "xylitol_g": 77.67
+  },
+  "900 rpm": {
+   "Xol_end": 148.28,
+   "Xyl_end": 7.4,
+   "Xol_48h": 64.35,
+   "Xol_72h": 92.52,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 46.5,
+   "X_end": 17.48,
+   "V_end_mL": 502.0,
+   "xylitol_g": 77.7
+  }
+ },
+ "yx006_feedB_DO_cascade_20pct": {
+  "Xol_end": 148.24,
+  "Xyl_end": 7.49,
+  "Xol_48h": 64.35,
+  "Xol_72h": 92.5,
+  "EtOH_fed_max": 0.0,
+  "pO2_fed_median": 16.7,
+  "X_end": 17.29,
+  "V_end_mL": 502.0,
+  "xylitol_g": 77.65
+ },
+ "yx006_C5-2502_60pct": {
+  "no enzyme": {
+   "Xol_end": 70.3,
+   "Xyl_end": 7.84,
+   "Xol_48h": 28.76,
+   "Xol_72h": 40.98,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 88.2,
+   "X_end": 3.45,
+   "V_end_mL": 546.0,
+   "xylitol_g": 40.31
+  },
+  "5 U/L": {
+   "Xol_end": 72.02,
+   "Xyl_end": 8.27,
+   "Xol_48h": 29.35,
+   "Xol_72h": 42.06,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 88.5,
+   "X_end": 3.45,
+   "V_end_mL": 546.0,
+   "xylitol_g": 41.3
+  },
+  "20 U/L": {
+   "Xol_end": 75.59,
+   "Xyl_end": 9.29,
+   "Xol_48h": 30.76,
+   "Xol_72h": 44.38,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 89.2,
+   "X_end": 3.45,
+   "V_end_mL": 546.0,
+   "xylitol_g": 43.34
+  }
+ },
+ "yx006_C5-2503_60pct": {
+  "no enzyme": {
+   "Xol_end": 67.73,
+   "Xyl_end": 7.12,
+   "Xol_48h": 28.37,
+   "Xol_72h": 40.13,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 85.2,
+   "X_end": 3.33,
+   "V_end_mL": 571.0,
+   "xylitol_g": 40.54
+  },
+  "5 U/L": {
+   "Xol_end": 69.14,
+   "Xyl_end": 7.44,
+   "Xol_48h": 28.84,
+   "Xol_72h": 41.0,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 85.5,
+   "X_end": 3.33,
+   "V_end_mL": 571.0,
+   "xylitol_g": 41.38
+  },
+  "20 U/L": {
+   "Xol_end": 71.73,
+   "Xyl_end": 8.08,
+   "Xol_48h": 29.9,
+   "Xol_72h": 42.7,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 86.0,
+   "X_end": 3.33,
+   "V_end_mL": 571.0,
+   "xylitol_g": 42.93
+  }
+ },
+ "yx006_C5-2501_fraction": {
+  "70 %": {
+   "Xol_end": 67.96,
+   "Xyl_end": 7.15,
+   "Xol_48h": 28.4,
+   "Xol_72h": 40.21,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 85.3,
+   "X_end": 3.35,
+   "V_end_mL": 569.0,
+   "xylitol_g": 40.54
+  },
+  "80 %": {
+   "Xol_end": 67.16,
+   "Xyl_end": 6.94,
+   "Xol_48h": 28.28,
+   "Xol_72h": 39.94,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 84.1,
+   "X_end": 3.33,
+   "V_end_mL": 577.0,
+   "xylitol_g": 40.61
+  },
+  "90 %": {
+   "Xol_end": 66.36,
+   "Xyl_end": 6.74,
+   "Xol_48h": 28.15,
+   "Xol_72h": 39.67,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 82.9,
+   "X_end": 3.31,
+   "V_end_mL": 585.0,
+   "xylitol_g": 40.67
+  },
+  "100 %": {
+   "Xol_end": 68.04,
+   "Xyl_end": 7.19,
+   "Xol_48h": 29.13,
+   "Xol_72h": 40.94,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 82.2,
+   "X_end": 3.28,
+   "V_end_mL": 593.0,
+   "xylitol_g": 42.26
+  }
+ },
+ "yx006_C5-2503_fraction": {
+  "60 %": {
+   "Xol_end": 67.73,
+   "Xyl_end": 7.12,
+   "Xol_48h": 28.37,
+   "Xol_72h": 40.13,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 85.2,
+   "X_end": 3.33,
+   "V_end_mL": 571.0,
+   "xylitol_g": 40.54
+  },
+  "70 %": {
+   "Xol_end": 66.76,
+   "Xyl_end": 6.87,
+   "Xol_48h": 28.21,
+   "Xol_72h": 39.81,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 83.9,
+   "X_end": 3.3,
+   "V_end_mL": 581.0,
+   "xylitol_g": 40.62
+  },
+  "80 %": {
+   "Xol_end": 65.8,
+   "Xyl_end": 6.65,
+   "Xol_48h": 28.05,
+   "Xol_72h": 39.48,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 82.5,
+   "X_end": 3.27,
+   "V_end_mL": 591.0,
+   "xylitol_g": 40.69
+  }
+ },
+ "yx005_vs_yx006_70pct_C5-2501": {
+  "YX-005": {
+   "Xol_end": 65.74,
+   "Xyl_end": 9.39,
+   "Xol_48h": 27.65,
+   "Xol_72h": 39.11,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 84.8,
+   "X_end": 3.33,
+   "V_end_mL": 569.0,
+   "xylitol_g": 39.21
+  },
+  "YX-006": {
+   "Xol_end": 67.96,
+   "Xyl_end": 7.15,
+   "Xol_48h": 28.4,
+   "Xol_72h": 40.21,
+   "EtOH_fed_max": 0.0,
+   "pO2_fed_median": 85.3,
+   "X_end": 3.35,
+   "V_end_mL": 569.0,
+   "xylitol_g": 40.54
+  }
+ },
+ "replicates_YX003_vs_YX001": {
+  "true_difference_gL": 6.04,
+  "run_to_run_sd_gL": 4.82,
+  "runs_per_strain_for_80pct_power": 10
+ }
+}
