@@ -1,0 +1,212 @@
+@prefix bp:   <http://example.org/bioprocess#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+bp: a owl:Ontology ;
+    rdfs:label "Bioprocess development record ontology" ;
+    rdfs:comment "Application ontology for a fermentation development campaign: runs, strains, samples, measurements with provenance, online and off-gas series, materials, deviations and documents." .
+
+# ---------------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------------
+bp:Run a owl:Class ; rdfs:comment "A cultivation. Identified by bp:runId in the canonical form 'FB-002' (bioreactor) or 'SF-007' (shake flask)." .
+bp:BioreactorRun a owl:Class ; rdfs:subClassOf bp:Run ; rdfs:comment "Fed-batch run in a 1 L bench reactor (runId FB-nnn)." .
+bp:FlaskRun a owl:Class ; rdfs:subClassOf bp:Run ; rdfs:comment "One shake flask (runId SF-nnn)." .
+bp:Strain a owl:Class ; rdfs:comment "Engineered strain, bp:strainId like 'YX-003'." .
+bp:Clone a owl:Class ; rdfs:comment "One transformant of a strain, bp:cloneId like 'YX-002-c1'." .
+bp:Vessel a owl:Class ; rdfs:comment "Bench reactor R1-R4." .
+bp:Person a owl:Class ; rdfs:comment "Lab member; bp:initials (e.g. 'MD') and bp:name." .
+bp:Sample a owl:Class ; rdfs:comment "A sample taken from a run. bp:sampleId in the canonical form 'FB006-S08'; suffix -M is the batch medium, -F the feed." .
+bp:Analyte a owl:Class ; rdfs:comment "Measured quantity (Glucose, Xylose, Xylitol, Glycerol, Ethanol, Acetate, Formate, Arabinose, Pyruvate, Succinate, Furfural, HMF, OD600, Dry weight). rdfs:label is the preferred name; skos:altLabel the abbreviations used in the records." .
+bp:Measurement a owl:Class ; rdfs:comment "One value of one analyte for one sample, as stated by one source. The same sample and analyte usually has several Measurement nodes, one per source (bp:sourceType). They can disagree." .
+bp:ReportedValue a owl:Class ; rdfs:comment "A summary number somebody wrote down for a run (e.g. 'Final xylitol (g/L)' in a workbook, or the end values in a lab note); not tied to a sample." .
+bp:HPLCSequence a owl:Class ; rdfs:comment "One HPLC sequence (a batch of injections on one day), bp:sequenceId like 'SEQ-20250321'." .
+bp:OnlineRecord a owl:Class ; rdfs:comment "One line of a reactor controller log (every 10 min), including the rows logged before inoculation (negative bp:processTimeH)." .
+bp:OffgasRecord a owl:Class ; rdfs:comment "One cycle of the exhaust-gas analyser (every 30 min). Only vessels R1 and R2 are connected to the analyser." .
+bp:Lot a owl:Class ; rdfs:comment "Raw-material lot of the C5 sugar fraction, bp:lotId like 'C5-2502'." .
+bp:CoAValue a owl:Class ; rdfs:comment "One line of a lot's certificate of analysis (concentration in the undiluted fraction)." .
+bp:FeedBatch a owl:Class ; rdfs:comment "A feed solution prepared for a run, with the lot that was actually used to make it." .
+bp:FeedType a owl:Class ; rdfs:comment "Feed recipe family (A, B, C5) with its density." .
+bp:PumpCalibration a owl:Class ; rdfs:comment "mL delivered per pump count for the BioCtrl controllers." .
+bp:Deviation a owl:Class ; rdfs:comment "Deviation report, bp:deviationId like 'DEV-2025-02'." .
+bp:MaintenanceEvent a owl:Class ; rdfs:comment "One line of the equipment maintenance log." .
+bp:Equipment a owl:Class ; rdfs:comment "Shared instrument (e.g. the off-gas analyser)." .
+bp:SOP a owl:Class ; rdfs:comment "One version of a standard operating procedure." .
+bp:Document a owl:Class ; rdfs:comment "A file of the record. Every statement in the graph comes from a document; bp:reportedIn / bp:describedIn point to it." .
+
+# ---------------------------------------------------------------------------
+# Run
+# ---------------------------------------------------------------------------
+bp:runId a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:string .
+bp:usesStrain a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Strain .
+bp:usesClone a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Clone ; rdfs:comment "Only present when a record of the run names the clone; several operators write the strain only." .
+bp:inVessel a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Vessel .
+bp:location a owl:DatatypeProperty ; rdfs:domain bp:FlaskRun ; rdfs:comment "Shaker shelf position of a flask." .
+bp:operatedBy a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Person .
+bp:inoculatedAt a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:dateTime ; rdfs:comment "Process time zero." .
+bp:inoculationDerivedFromLIMS a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:boolean ; rdfs:comment "True when no record states the inoculation time and it was computed as sampledAt - processTimeH of the first sample." .
+bp:startDate a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:date .
+bp:purpose a owl:DatatypeProperty ; rdfs:domain bp:Run .
+bp:condition a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:comment "Free-text conditions noted for the run or flask (e.g. 'Tolerance, 70 % C5; C5 lot C5-2501')." .
+bp:batchMedium a owl:DatatypeProperty ; rdfs:domain bp:Run .
+bp:feedDescription a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:comment "Feed as written in the source." .
+bp:feedType a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:comment "'A', 'B' or 'C5'." .
+bp:c5FractionPct a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:double ; rdfs:comment "Percentage of C5 fraction in the feed (reactors) or medium (flasks)." .
+bp:statedLot a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Lot ; rdfs:comment "C5 lot the run records name. Compare with bp:lotUsed of the FeedBatch prepared for the run." .
+bp:feedStartH a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:double .
+bp:feedRateSetpointMLPerH a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:double .
+bp:pHSetpoint a owl:DatatypeProperty ; rdfs:domain bp:Run ; rdfs:range xsd:double .
+bp:buffered a owl:DatatypeProperty ; rdfs:domain bp:FlaskRun ; rdfs:range xsd:boolean ; rdfs:comment "False for flasks without CaCO3." .
+bp:note a owl:DatatypeProperty ; rdfs:comment "Short remark attached to the run in a spreadsheet." .
+bp:labNote a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Document .
+bp:hasOnlineLog a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Document .
+bp:hasOffgasData a owl:ObjectProperty ; rdfs:domain bp:Run ; rdfs:range bp:Document ; rdfs:comment "Present only for runs with an off-gas export." .
+bp:describedIn a owl:ObjectProperty ; rdfs:range bp:Document ; rdfs:comment "Documents that carry data about this run, strain or lot." .
+
+# ---------------------------------------------------------------------------
+# Strain, clone, person, vessel
+# ---------------------------------------------------------------------------
+bp:strainId a owl:DatatypeProperty ; rdfs:domain bp:Strain .
+bp:alias a owl:DatatypeProperty ; rdfs:domain bp:Strain .
+bp:parentStrain a owl:ObjectProperty ; rdfs:domain bp:Strain ; rdfs:range bp:Strain .
+bp:builtOnClone a owl:ObjectProperty ; rdfs:domain bp:Strain ; rdfs:range bp:Clone ; rdfs:comment "The parent clone the strain was constructed in." .
+bp:selectedClone a owl:ObjectProperty ; rdfs:domain bp:Strain ; rdfs:range bp:Clone ; rdfs:comment "Clone chosen for further work after the screen." .
+bp:cloneSelectedOn a owl:DatatypeProperty ; rdfs:domain bp:Strain ; rdfs:range xsd:date .
+bp:clonesTested a owl:DatatypeProperty ; rdfs:domain bp:Strain ; rdfs:range xsd:integer .
+bp:genotype a owl:DatatypeProperty ; rdfs:domain bp:Strain .
+bp:change a owl:DatatypeProperty ; rdfs:domain bp:Strain ; rdfs:comment "Genetic change relative to the parent, as in the construction record." .
+bp:geneticPart a owl:DatatypeProperty ; rdfs:domain bp:Strain .
+bp:constructedOn a owl:DatatypeProperty ; rdfs:domain bp:Strain ; rdfs:range xsd:date .
+bp:constructedBy a owl:ObjectProperty ; rdfs:domain bp:Strain ; rdfs:range bp:Person .
+bp:constructionNote a owl:DatatypeProperty ; rdfs:domain bp:Strain .
+bp:cryoPosition a owl:DatatypeProperty ; rdfs:domain bp:Strain .
+bp:status a owl:DatatypeProperty ; rdfs:domain bp:Strain ; rdfs:comment "Registry status, e.g. 'active', 'on hold'." .
+bp:cloneId a owl:DatatypeProperty ; rdfs:domain bp:Clone .
+bp:cloneLabel a owl:DatatypeProperty ; rdfs:domain bp:Clone ; rdfs:comment "'c1', 'c2', 'c3'." .
+bp:cloneOf a owl:ObjectProperty ; rdfs:domain bp:Clone ; rdfs:range bp:Strain .
+bp:initials a owl:DatatypeProperty ; rdfs:domain bp:Person .
+bp:name a owl:DatatypeProperty ; rdfs:domain bp:Person .
+bp:vesselId a owl:DatatypeProperty ; rdfs:domain bp:Vessel .
+bp:controller a owl:DatatypeProperty ; rdfs:comment "Controller model of a vessel ('BioCtrl B1' logs pump counts; 'VesselView VV-1' logs mL and the feed balance)." .
+
+# ---------------------------------------------------------------------------
+# Sample and measurement
+# ---------------------------------------------------------------------------
+bp:sampleId a owl:DatatypeProperty ; rdfs:domain bp:Sample .
+bp:ofRun a owl:ObjectProperty ; rdfs:range bp:Run ; rdfs:comment "Run of a Sample, OnlineRecord, OffgasRecord or ReportedValue." .
+bp:sampledAt a owl:DatatypeProperty ; rdfs:domain bp:Sample ; rdfs:range xsd:dateTime .
+bp:processTimeH a owl:DatatypeProperty ; rdfs:range xsd:double ; rdfs:comment "Hours after inoculation. On Sample, OnlineRecord and OffgasRecord. Always use this, not the instrument clocks, to place data in the run." .
+bp:sampleType a owl:DatatypeProperty ; rdfs:domain bp:Sample ; rdfs:comment "'broth', 'medium' or 'feed'." .
+bp:volumeML a owl:DatatypeProperty ; rdfs:range xsd:double ; rdfs:comment "Volume of a sample or feed batch." .
+bp:reactorVolumeML a owl:DatatypeProperty ; rdfs:domain bp:Sample ; rdfs:range xsd:double ; rdfs:comment "Broth volume in the reactor at sampling." .
+bp:feedAddedML a owl:DatatypeProperty ; rdfs:domain bp:Sample ; rdfs:range xsd:double .
+bp:requestedAnalyses a owl:DatatypeProperty ; rdfs:domain bp:Sample .
+bp:storage a owl:DatatypeProperty ; rdfs:domain bp:Sample .
+bp:ofSample a owl:ObjectProperty ; rdfs:domain bp:Measurement ; rdfs:range bp:Sample .
+bp:analyte a owl:ObjectProperty ; rdfs:range bp:Analyte ; rdfs:comment "On Measurement, ReportedValue and CoAValue." .
+bp:analyteName a owl:DatatypeProperty ; rdfs:domain bp:Analyte ; rdfs:comment "Preferred name, e.g. 'Xylitol', 'Dry weight', 'OD600'." .
+bp:value a owl:DatatypeProperty ; rdfs:range xsd:double ; rdfs:comment "Numeric value. Absent when the result is below the detection limit (bp:belowLOD true)." .
+bp:belowLOD a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:comment "True when the source reports the analyte as measured but below the detection limit ('<LOD', '<0.05', 'n.d.'). This is a result, not a missing value, and not zero." .
+bp:lodLimit a owl:DatatypeProperty ; rdfs:range xsd:double ; rdfs:comment "Limit written in the source, when it gives one (e.g. 0.05)." .
+bp:unit a owl:DatatypeProperty ; rdfs:comment "'g/L', or 'AU' for OD600." .
+bp:kind a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:comment "'HPLC', 'OD600' or 'Dry weight'." .
+bp:sourceType a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:comment "Where the value comes from: 'hplc_processed' (analytics results workbook, the laboratory's reported result), 'hplc_raw' (instrument sequence file; value = vial concentration x dilution), 'run_workbook' (a scientist's own workbook), 'operator_log' (a technician's hand-kept master log, transcribed values)." .
+bp:reportedIn a owl:ObjectProperty ; rdfs:range bp:Document .
+bp:fromSequence a owl:ObjectProperty ; rdfs:domain bp:Measurement ; rdfs:range bp:HPLCSequence .
+bp:analysedOn a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:date .
+bp:sopVersion a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:comment "Version of the HPLC method, 'v1' or 'v2'." .
+bp:dilution a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:double ; rdfs:comment "Dilution factor (10 means 1:10)." .
+bp:vialConcentration a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:double ; rdfs:comment "g/L in the diluted vial (hplc_raw only)." .
+bp:retentionTimeMin a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:double .
+bp:peakArea a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:double .
+bp:standardError a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:double .
+bp:comment a owl:DatatypeProperty ; rdfs:comment "Comment cell of the source row." .
+bp:isCurrent a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:boolean ; rdfs:comment "On hplc_processed measurements only. False when the results workbook marks the value as superseded by a re-run; true otherwise." .
+bp:supersededBy a owl:ObjectProperty ; rdfs:domain bp:Measurement ; rdfs:range bp:Measurement ; rdfs:comment "The re-run measurement that replaces this one." .
+bp:isRerun a owl:DatatypeProperty ; rdfs:domain bp:Measurement ; rdfs:range xsd:boolean .
+bp:valueLabel a owl:DatatypeProperty ; rdfs:domain bp:ReportedValue ; rdfs:comment "Label as written, e.g. 'Final xylitol (g/L)', 'Feed bottle start (g)', 'end Xol'." .
+bp:atProcessTimeH a owl:DatatypeProperty ; rdfs:domain bp:ReportedValue ; rdfs:range xsd:double .
+
+# ---------------------------------------------------------------------------
+# HPLC sequences
+# ---------------------------------------------------------------------------
+bp:sequenceId a owl:DatatypeProperty ; rdfs:domain bp:HPLCSequence .
+bp:runDate a owl:DatatypeProperty ; rdfs:domain bp:HPLCSequence ; rdfs:range xsd:date .
+bp:methodVersion a owl:DatatypeProperty ; rdfs:domain bp:HPLCSequence .
+bp:rerunOf a owl:ObjectProperty ; rdfs:domain bp:HPLCSequence ; rdfs:range bp:HPLCSequence .
+
+# ---------------------------------------------------------------------------
+# Online and off-gas series
+# ---------------------------------------------------------------------------
+bp:timestamp a owl:DatatypeProperty ; rdfs:range xsd:dateTime ; rdfs:comment "Wall-clock time of the record." .
+bp:loggerElapsedH a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double ; rdfs:comment "Hours since the logger was started. NOT process time: loggers start before inoculation." .
+bp:stirrerRpm a owl:DatatypeProperty ; rdfs:range xsd:double .
+bp:temperatureC a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double .
+bp:pH a owl:DatatypeProperty ; rdfs:range xsd:double .
+bp:pO2Pct a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double ; rdfs:comment "Dissolved oxygen, % of air saturation." .
+bp:baseML a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double ; rdfs:comment "Cumulative base added, mL (converted from pump counts for BioCtrl vessels)." .
+bp:acidML a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double ; rdfs:comment "Cumulative acid added, mL." .
+bp:feedPumpML a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double ; rdfs:comment "Cumulative feed by pump counter, mL (BioCtrl vessels R1, R2 only)." .
+bp:basePumpCounts a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:integer ; rdfs:comment "Raw cumulative counts (BioCtrl only)." .
+bp:acidPumpCounts a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:integer .
+bp:feedPumpCounts a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:integer .
+bp:feedBalanceG a owl:DatatypeProperty ; rdfs:domain bp:OnlineRecord ; rdfs:range xsd:double ; rdfs:comment "Mass of the feed bottle, g (VesselView vessels R3, R4 only). Feed added = balance loss / feed density." .
+bp:analyserRelTimeS a owl:DatatypeProperty ; rdfs:domain bp:OffgasRecord ; rdfs:range xsd:double ; rdfs:comment "Seconds since the analyser was started. NOT process time." .
+bp:o2Pct a owl:DatatypeProperty ; rdfs:domain bp:OffgasRecord ; rdfs:range xsd:double ; rdfs:comment "Exhaust O2, % of dry gas." .
+bp:co2Pct a owl:DatatypeProperty ; rdfs:domain bp:OffgasRecord ; rdfs:range xsd:double .
+bp:n2Pct a owl:DatatypeProperty ; rdfs:domain bp:OffgasRecord ; rdfs:range xsd:double .
+bp:arPct a owl:DatatypeProperty ; rdfs:domain bp:OffgasRecord ; rdfs:range xsd:double .
+bp:inletO2Pct a owl:DatatypeProperty ; rdfs:domain bp:Equipment ; rdfs:range xsd:double .
+bp:inletCO2Pct a owl:DatatypeProperty ; rdfs:domain bp:Equipment ; rdfs:range xsd:double .
+bp:airflowLPerMin a owl:DatatypeProperty ; rdfs:domain bp:Equipment ; rdfs:range xsd:double .
+
+# ---------------------------------------------------------------------------
+# Materials, feeds, calibration
+# ---------------------------------------------------------------------------
+bp:lotId a owl:DatatypeProperty ; rdfs:domain bp:Lot .
+bp:supplier a owl:DatatypeProperty ; rdfs:domain bp:Lot .
+bp:shippedOn a owl:DatatypeProperty ; rdfs:domain bp:Lot ; rdfs:range xsd:date .
+bp:ofLot a owl:ObjectProperty ; rdfs:domain bp:CoAValue ; rdfs:range bp:Lot .
+bp:componentLabel a owl:DatatypeProperty ; rdfs:domain bp:CoAValue ; rdfs:comment "Component as written on the certificate, e.g. 'Formic acid'." .
+bp:batchId a owl:DatatypeProperty ; rdfs:domain bp:FeedBatch .
+bp:preparedOn a owl:DatatypeProperty ; rdfs:domain bp:FeedBatch ; rdfs:range xsd:date .
+bp:preparedBy a owl:ObjectProperty ; rdfs:domain bp:FeedBatch ; rdfs:range bp:Person .
+bp:contents a owl:DatatypeProperty ; rdfs:domain bp:FeedBatch .
+bp:lotUsed a owl:ObjectProperty ; rdfs:domain bp:FeedBatch ; rdfs:range bp:Lot ; rdfs:comment "Lot recorded on the media preparation sheet." .
+bp:forRun a owl:ObjectProperty ; rdfs:domain bp:FeedBatch ; rdfs:range bp:Run .
+bp:feedCode a owl:DatatypeProperty ; rdfs:domain bp:FeedType .
+bp:densityGPerML a owl:DatatypeProperty ; rdfs:domain bp:FeedType ; rdfs:range xsd:double .
+bp:pump a owl:DatatypeProperty ; rdfs:domain bp:PumpCalibration ; rdfs:comment "'acid', 'base' or 'feed'." .
+bp:mlPerCount a owl:DatatypeProperty ; rdfs:domain bp:PumpCalibration ; rdfs:range xsd:double .
+
+# ---------------------------------------------------------------------------
+# Deviations, maintenance, SOPs, documents
+# ---------------------------------------------------------------------------
+bp:deviationId a owl:DatatypeProperty ; rdfs:domain bp:Deviation .
+bp:title a owl:DatatypeProperty .
+bp:date a owl:DatatypeProperty ; rdfs:range xsd:date .
+bp:raisedBy a owl:ObjectProperty ; rdfs:domain bp:Deviation ; rdfs:range bp:Person .
+bp:affected a owl:DatatypeProperty ; rdfs:domain bp:Deviation ; rdfs:comment "'Affected' field as written." .
+bp:affectsRun a owl:ObjectProperty ; rdfs:domain bp:Deviation ; rdfs:range bp:Run .
+bp:affectsSequence a owl:ObjectProperty ; rdfs:domain bp:Deviation ; rdfs:range bp:HPLCSequence .
+bp:affectsVessel a owl:ObjectProperty ; rdfs:domain bp:Deviation ; rdfs:range bp:Vessel .
+bp:description a owl:DatatypeProperty .
+bp:rootCause a owl:DatatypeProperty ; rdfs:domain bp:Deviation .
+bp:impactOnData a owl:DatatypeProperty ; rdfs:domain bp:Deviation .
+bp:correctiveAction a owl:DatatypeProperty ; rdfs:domain bp:Deviation .
+bp:equipment a owl:DatatypeProperty ; rdfs:domain bp:MaintenanceEvent .
+bp:performedBy a owl:ObjectProperty ; rdfs:domain bp:MaintenanceEvent ; rdfs:range bp:Person .
+bp:concernsVessel a owl:ObjectProperty ; rdfs:domain bp:MaintenanceEvent ; rdfs:range bp:Vessel .
+bp:sopId a owl:DatatypeProperty ; rdfs:domain bp:SOP .
+bp:version a owl:DatatypeProperty ; rdfs:domain bp:SOP .
+bp:effectiveFrom a owl:DatatypeProperty ; rdfs:domain bp:SOP ; rdfs:range xsd:date .
+bp:coversAnalyte a owl:ObjectProperty ; rdfs:domain bp:SOP ; rdfs:range bp:Analyte ; rdfs:comment "Analytes the method quantifies. An analyte not covered by the version in force was not measured." .
+bp:lodVialLowGPerL a owl:DatatypeProperty ; rdfs:domain bp:SOP ; rdfs:range xsd:double .
+bp:lodVialHighGPerL a owl:DatatypeProperty ; rdfs:domain bp:SOP ; rdfs:range xsd:double .
+bp:changeNote a owl:DatatypeProperty ; rdfs:domain bp:SOP .
+bp:path a owl:DatatypeProperty ; rdfs:domain bp:Document ; rdfs:comment "Path of the file in the corpus." .
+bp:docType a owl:DatatypeProperty ; rdfs:domain bp:Document ; rdfs:comment "lab_note, run_workbook, master_log, study_workbook, hplc_raw_sequence, hplc_results_workbook, lims_register, online_log_bioctrl, online_log_vesselview, offgas_export, strain_registry, construction_record, certificate_of_analysis, deviation_report, maintenance_log, equipment_setup, sop, meeting_minutes, weekly_report." .
+bp:author a owl:ObjectProperty ; rdfs:range bp:Person .
+bp:mentions a owl:ObjectProperty ; rdfs:domain bp:Document ; rdfs:comment "Runs, strains, lots, deviations, sequences and vessels named in the text of a document. The text itself is not in the graph." .

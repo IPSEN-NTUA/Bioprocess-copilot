@@ -30,3 +30,7 @@ paper/*.fls
 paper/*-eps-converted-to.pdf
 paper/frontiers.pdf
 paper/frontiers_SupplementaryMaterial.pdf
+
+# Copilot: built graph, embedding cache, smoke runs
+copilot/.cache/
+copilot/results/smoke-*/

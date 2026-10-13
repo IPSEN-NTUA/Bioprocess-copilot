@@ -23,6 +23,7 @@ benchmark/      corpus generator, the pilot corpus, answer key and questions (se
   pilot/corpus/         145 documents - the only thing a system under test may index
   pilot/answer_key/     simulator truth - never index
   pilot/questions/      76 questions (json / csv / md)
+copilot/        the three systems under test (RAG, KG, hybrid), runner and grader (see copilot/README.md)
 paper/          LaTeX source (Frontiers template)
 data/           placeholder for the partner data (git-ignored)
 ```
