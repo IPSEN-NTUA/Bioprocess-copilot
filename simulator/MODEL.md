@@ -2,7 +2,7 @@
 
 `simulator.py` produces the true state of a yeast xylitol cultivation, which the benchmark's document renderers (HPLC sheets, online logs, off-gas, lab notes …) will later read from. This file lists every equation and parameter, and where each value comes from.
 
-**Core:** VTT kinetic model 31, starting from the BC18 *refined* parameters in `realdata_summary.json` and re-tuned against BC18 within ±20% of each value (`tune_bc18.py`). **Extensions:** physically motivated terms that leave model 31 as it is at the BC18 reference conditions (30 °C, pH 5.5, aerobic, glucose-limited feed, no inhibitors).
+**Core:**  kinetic model 31, starting from the BC18 *refined* parameters in `realdata_summary.json` and re-tuned against BC18 within ±20% of each value (`tune_bc18.py`). **Extensions:** physically motivated terms that leave model 31 as it is at the BC18 reference conditions (30 °C, pH 5.5, aerobic, glucose-limited feed, no inhibitors).
 
 ## State vector
 
@@ -150,6 +150,5 @@ A run takes about 1.5 s. `validate_bc18.py` regenerates both figures, `tune_bc18
 
 ## Open points for Stefanos
 
-1. Confirm the inferred antifoam dose in BC18, or replace it with what VTT actually did.
-2. Every extension parameter is a literature-typical guess for *S. cerevisiae* (marked in the `Strain` dataclass). These are what the NRA strain-design step will perturb.
-3. Measurement noise, analytical artefacts and faults are *not* in this module on purpose. They belong in the measurement and rendering layer, so the truth stays clean for answer keys.
+1. Every extension parameter is a literature-typical guess for *S. cerevisiae* (marked in the `Strain` dataclass). These are what the NRA strain-design step will perturb.
+2. Measurement noise, analytical artefacts and faults are *not* in this module on purpose. They belong in the measurement and rendering layer, so the truth stays clean for answer keys.
